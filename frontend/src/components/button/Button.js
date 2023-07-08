@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Button.css";
 import Modal from "../registration/Registration";
 
-
 const onMouseEnter = (event, color, bgColor) => {
   const el = event.target;
   el.style.color = color;
@@ -25,7 +24,7 @@ export default function Button({ text, className, theme }) {
   const closeModal = () => {
     setIsOpen(false);
   };
-  
+
   return (
     <div className={className}>
       <button

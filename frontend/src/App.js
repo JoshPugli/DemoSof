@@ -71,8 +71,8 @@ const App = () => {
     };
   }, []);
 
-  return ( 
-    <div style={{overflow: "hidden"}}>
+  return (
+    <div style={{ overflow: "hidden" }}>
       <MDBNavbar expand="lg" dark bgColor="dark" fixed="top">
         <MDBContainer fluid>
           <MDBNavbarBrand href="#">
@@ -150,12 +150,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          
         </Fade>
-        
       </div>
-
-
 
       <div id="content" className="section" style={{ background: "#f5f5f5" }}>
         <div className="main" id="skills">
@@ -237,11 +233,9 @@ const App = () => {
           </div>
         </div>
         <div className="circle circle1"></div>
-  <div className="circle circle2"></div>
-  <div className="circle circle3"></div>
+        <div className="circle circle2"></div>
+        <div className="circle circle3"></div>
       </div>
-
-
 
       <div id="instructors" className="section">
         <div className="main" id="skills" style={{ marginTop: "30px" }}>
@@ -275,9 +269,7 @@ const App = () => {
                   </Fade>
                 </div>
                 <div>
-
-                    <img src={gma} alt="Your Image" className="portrait" />
-
+                  <img src={gma} alt="Your Image" className="portrait" />
                 </div>
               </div>
 
@@ -341,9 +333,7 @@ const App = () => {
                   </Fade>
                 </div>
                 <div>
-
-                    <img src={ben} alt="Your Image" className="portrait" />
-
+                  <img src={ben} alt="Your Image" className="portrait" />
                 </div>
               </div>
 

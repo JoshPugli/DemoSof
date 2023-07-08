@@ -75,6 +75,6 @@ export default function Modal({ onClose }) {
       </div>
     </div>
   );
-  
+
   return ReactDOM.createPortal(modal, document.body);
 }
