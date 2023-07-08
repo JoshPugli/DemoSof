@@ -106,7 +106,9 @@ export default function Modal({ onClose }) {
               onChange={handleFirstNameChange}
               required
             />
-            {firstNameError && <p className="error-message">{firstNameError}</p>}
+            {firstNameError && (
+              <p className="error-message">{firstNameError}</p>
+            )}
           </div>
           <div className="form-group">
             <label htmlFor="lastName">Last Name:</label>
