@@ -196,6 +196,18 @@
     margin-top: 0px;
   } */
 }
+
+
+@media (max-width: 1000px) {
+  .circle2 {
+    display: none;
+  }
+
+  .circle3 {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
