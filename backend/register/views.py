@@ -29,8 +29,8 @@ def send_email_view(request):
     if request.method == 'POST':
         subject = f"{request.POST.get('first_name')} {request.POST.get('last_name')} Signup for The Evolution of Systemic Racism"
         message = f"{request.POST.get('first_name')} {request.POST.get('last_name')} has requested to join the course. \n\n MESSAGE: {request.POST.get('message')} \n\n EMAIL: {request.POST.get('email')}"
-        from_email = settings.EMAIL_HOST_USER  # Replace with your email address
-        recipient_list = ['demosof69@gmail.com']  # Replace with recipient email address(es)
+        from_email = settings.EMAIL_HOST_USER  
+        recipient_list = ['jdpuglielli@gmail.com']  
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
         return HttpResponse('Email sent successfully!')
     else:
