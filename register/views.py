@@ -5,6 +5,7 @@ from .models import Person
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
+import os
 
 @csrf_exempt
 def create_person(request):
@@ -30,7 +31,8 @@ def send_email_view(request):
         subject = f"{request.POST.get('first_name')} {request.POST.get('last_name')} Signup for The Evolution of Systemic Racism"
         message = f"{request.POST.get('first_name')} {request.POST.get('last_name')} has requested to join the course. \n\n MESSAGE: {request.POST.get('message')} \n\n EMAIL: {request.POST.get('email')}"
         from_email = settings.EMAIL_HOST_USER  
-        recipient_list = ['jdpuglielli@gmail.com']  
+        recipient = os.environ.get('RECIPIENT_EMAIL')
+        recipient_list = [recipient]  
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
         return HttpResponse('Email sent successfully!')
     else:

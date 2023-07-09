@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Registration.css";
 import ReactDOM from "react-dom";
-import { ThreeDots } from 'react-loading-icons';
+import { ThreeDots } from "react-loading-icons";
 
 export default function Modal({ onClose }) {
   const [firstName, setFirstName] = useState("");
@@ -106,7 +106,12 @@ export default function Modal({ onClose }) {
     } else if (submitStatus === "success") {
       return <span>Success!</span>;
     } else if (submitStatus === "failure") {
-      return <span>Something Went Wrong. Contact website creator at jdpuglielli@gmail.com for assistance. </span>;
+      return (
+        <span>
+          Something Went Wrong. Contact website creator at jdpuglielli@gmail.com
+          for assistance.{" "}
+        </span>
+      );
     } else {
       return "Register";
     }
@@ -161,14 +166,18 @@ export default function Modal({ onClose }) {
             />
           </div>
           <div className="button-group">
-            <button type="submit" cursor={isSubmitting ? "default" : "default"} disabled={isSubmitting || submitStatus !== null}>
+            <button
+              type="submit"
+              cursor={isSubmitting ? "not-allowed" : "not-allowed"}
+              disabled={isSubmitting || submitStatus !== null}
+            >
               {renderButtonContent()}
             </button>
             <button
               type="button"
               onClick={onClose}
               disabled={isSubmitting}
-              cursor={isSubmitting ? "default" : "default"}
+              cursor={isSubmitting ? "not-allowed" : "not-allowed"}
             >
               Close
             </button>
