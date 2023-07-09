@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Registration.css";
 import ReactDOM from "react-dom";
+import { ThreeDots } from 'react-loading-icons';
 
 export default function Modal({ onClose }) {
   const [firstName, setFirstName] = useState("");
@@ -10,6 +11,8 @@ export default function Modal({ onClose }) {
   const [firstNameError, setFirstNameError] = useState("");
   const [lastNameError, setLastNameError] = useState("");
   const [emailError, setEmailError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -62,6 +65,8 @@ export default function Modal({ onClose }) {
       return;
     }
 
+    setIsSubmitting(true);
+
     // Prepare the form data
     const formData = new FormData();
     formData.append("first_name", firstName);
@@ -77,19 +82,34 @@ export default function Modal({ onClose }) {
       .then((response) => {
         if (response.ok) {
           console.log("Email sent successfully!");
+          setSubmitStatus("success");
           // Perform any additional actions or show success message
         } else {
           console.error("Failed to send email.");
+          setSubmitStatus("failure");
           // Handle the error case
         }
       })
       .catch((error) => {
         console.error("Error occurred while sending email:", error);
+        setSubmitStatus("failure");
         // Handle the error case
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
+  };
 
-    // Close the modal
-    onClose();
+  const renderButtonContent = () => {
+    if (isSubmitting) {
+      return <ThreeDots />;
+    } else if (submitStatus === "success") {
+      return <span>Success!</span>;
+    } else if (submitStatus === "failure") {
+      return <span>Something Went Wrong. Contact website creator at jdpuglielli@gmail.com for assistance. </span>;
+    } else {
+      return "Register";
+    }
   };
 
   const modal = (
@@ -141,8 +161,15 @@ export default function Modal({ onClose }) {
             />
           </div>
           <div className="button-group">
-            <button type="submit">Register</button>
-            <button type="button" onClick={onClose}>
+            <button type="submit" cursor={isSubmitting ? "default" : "default"} disabled={isSubmitting || submitStatus !== null}>
+              {renderButtonContent()}
+            </button>
+            <button
+              type="button"
+              onClick={onClose}
+              disabled={isSubmitting}
+              cursor={isSubmitting ? "default" : "default"}
+            >
               Close
             </button>
           </div>
