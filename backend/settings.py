@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
+import django_heroku
+import dotenv
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +31,7 @@ SECRET_KEY = "django-insecure-02)wzxiupdva+z3##vxxrro_5#*%ya91=0d_bw)ictxa4t_jnk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["demosof.herokuapp.com"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -147,3 +152,4 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # SMTP password
 EMAIL_USE_TLS = True  # Use TLS encryption for secure connection
 EMAIL_USE_SSL = False
 
+django_heroku.settings(locals())
