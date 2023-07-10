@@ -30,7 +30,7 @@ def send_email_view(request):
     if request.method == 'POST':
         subject = f"{request.POST.get('first_name')} {request.POST.get('last_name')} Signup for The Evolution of Systemic Racism"
         message = f"{request.POST.get('first_name')} {request.POST.get('last_name')} has requested to join the course. \n\n MESSAGE: {request.POST.get('message')} \n\n EMAIL: {request.POST.get('email')}"
-        from_email = settings.EMAIL_HOST_USER  
+        from_email = settings.EMAIL_HOST_USER   
         recipient = os.environ.get('RECIPIENT_EMAIL')
         recipient_list = [recipient]  
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
