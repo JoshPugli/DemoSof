@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "npm run build",
-    "heroku-prebuild": "npm install --legacy-peer-deps"
+    "heroku-postbuild": "npm install --legacy-peer-deps && npm run build"
   },
   "engines": {
     "node": "16.18.0",
