@@ -75,7 +75,7 @@ export default function Modal({ onClose }) {
     formData.append("message", message);
 
     // Make the API request
-    fetch("http://127.0.0.1:8000/register/send-email/", {
+    fetch("https://demosof-xft3t.ondigitalocean.app/register/send-email/", {
       method: "POST",
       body: formData,
     })
