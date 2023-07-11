@@ -12,25 +12,28 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
-import dotenv
+from urllib.parse import urlparse
+from django.core.management.utils import get_random_secret_key
+import sys
 import dj_database_url
 
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-02)wzxiupdva+z3##vxxrro_5#*%ya91=0d_bw)ictxa4t_jnk"
+# SECRET_KEY = "django-insecure-02)wzxiupdva+z3##vxxrro_5#*%ya91=0d_bw)ictxa4t_jnk"
+SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['demosof.herokuapp.com', '127.0.0.1:8000', 'localhost']
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1, localhost").split(",")
 
 
 # Application definition
@@ -63,7 +66,7 @@ ROOT_URLCONF = "backend.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR,'build')],
+        "DIRS": [os.path.join(BASE_DIR, 'frontend/build')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -128,12 +131,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static'),
-]
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/build/static'),
+]
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -148,5 +151,3 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')  # SMTP username
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')  # SMTP password
 EMAIL_USE_TLS = True  # Use TLS encryption for secure connection
 EMAIL_USE_SSL = False
-
-django_heroku.settings(locals())
