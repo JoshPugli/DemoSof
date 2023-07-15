@@ -157,8 +157,11 @@ const App = () => {
         <div className="main" id="skills">
           <div className="skills-header-div">
             <Fade bottom duration={2000} distance="20px">
-              <h1 className="skills-header" style={{ color: "#2d2d2d" }}>
-                What will be covered in this course?
+              <h1
+                className="skills-header"
+                style={{ color: "#2d2d2d", marginTop: "50px" }}
+              >
+                Course Information
               </h1>
             </Fade>
             <Fade duration={2000}>
@@ -172,7 +175,7 @@ const App = () => {
                       textAlign: "center",
                     }}
                   >
-                    Content
+                    Content & Delivery
                   </h1>
                 </Fade>
                 <div>
@@ -191,7 +194,11 @@ const App = () => {
                     structures that have resulted in disparities in access to
                     education, health care, employment opportunities, wealth
                     accumulation and unequal treatment in our criminal justice
-                    system experienced by our Black brothers and sisters.
+                    system experienced by our Black brothers and sisters. <br />{" "}
+                    <br />
+                    The course will be held on Tuesday evenings from Sept 14 to
+                    Nov 14, with the exception of Oct 31st. <br /> Classes will take
+                    place on Zoom from 6:30 pm to 8:30 pm.
                   </div>
                 </div>
               </div>
