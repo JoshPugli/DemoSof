@@ -41,7 +41,7 @@ def send_email_view(request):
         send_mail(subject, message, from_email, recipient_list, fail_silently=False)
         
         # Send confirmation email to user
-        subject = f"Evolution of Systemic Racism <br />Signup Confirmation"
+        subject = f"Evolution of Systemic Racism Signup Confirmation"
         message = f"Dear {request.POST.get('first_name')}, \n\nThank you for signing up for the course. Your information has been sent to the instructors."
         from_email = settings.EMAIL_HOST_USER  
         recipient_list = [request.POST.get('email')]
