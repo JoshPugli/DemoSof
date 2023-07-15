@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Course Registration Website - README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the README file for the website of **This is The Evolution of Systemic Racism** course registration. This website provides information and registration options for the course, where you will explore history from new perspectives to gain a better understanding of our present, the path we have traversed, and the possibilities for the future.
 
-## Available Scripts
+## Website URL
 
-In the project directory, you can run:
+The website is hosted at: [https://demosof-xft3t.ondigitalocean.app/](https://demosof-xft3t.ondigitalocean.app/)
 
-### `npm start`
+## Course Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Title: This is The Evolution of Systemic Racism**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This course offers a comprehensive exploration of systemic racism throughout history and its impact on modern society. By delving into various historical events and perspectives, this course aims to provide a deeper understanding of the origins and consequences of systemic racism.
 
-### `npm test`
+## Registration Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To register for the course, please follow these steps:
 
-### `npm run build`
+1. Visit the course registration website at [https://demosof-xft3t.ondigitalocean.app/](https://demosof-xft3t.ondigitalocean.app/).
+2. Click on the "Register" button located on the homepage.
+3. Fill out the registration form with the required information, including your name, email address, and any additional details requested.
+4. Review the course details and schedule provided on the website.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## System Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To access and participate in the course, please ensure that you meet the following system requirements:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Reliable internet connection
+- Web browser (Google Chrome, Mozilla Firefox, Safari, or Microsoft Edge)
 
-### `npm run eject`
+## Support and Contact Information
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you encounter any issues during the registration process or have any questions regarding the course, please contact our support team:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Email: jdpuglielli@gmail.com
+- Phone: +1 (647) 561-3949
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Feedback and Suggestions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+We value your feedback and suggestions to improve the course and the registration process. If you have any ideas or recommendations, please feel free to reach out to us using the contact information provided above. Your input is greatly appreciated.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This website and its content are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). Feel free to share and adapt the content, while providing appropriate attribution to the original authors.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for your interest in the **This is The Evolution of Systemic Racism** course. We look forward to welcoming you to an enlightening journey of historical discovery and understanding.
