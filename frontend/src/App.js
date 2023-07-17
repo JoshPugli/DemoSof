@@ -196,7 +196,7 @@ const App = () => {
                     accumulation and unequal treatment in our criminal justice
                     system experienced by our Black brothers and sisters. <br />{" "}
                     <br />
-                    The course will be held on Tuesday evenings from Sept 14 to
+                    The course will be held on Tuesday evenings from Sept 12 to
                     Nov 14, with the exception of Oct 31st. <br /> Classes will take
                     place on Zoom from 6:30 pm to 8:30 pm.
                   </div>
